@@ -56,6 +56,16 @@ netlify.toml                       Configuration Netlify
 - **Police** : Plus Jakarta Sans, fichier `jakarta-latin-var.woff2` (aucune requête à Google).
 - **Ajouter une photo à la galerie** : exporter en WebP en deux tailles (600 px et 1200 px de large) à la racine, puis copier un bloc `<li>` de la galerie dans `index.html`.
 
+## Référencement Google (à faire une fois le site en ligne sur climativ.ca)
+
+Le site est déjà optimisé : titre et description en français du Québec, données structurées (entreprise, services, licence RBQ, secteurs desservis, FAQ), `sitemap.xml` et `robots.txt`. Pour être trouvé rapidement :
+
+1. **Profil d'entreprise Google** (le plus important pour « thermopompe Québec ») : ajoute `https://climativ.ca` comme site web, vérifie l'adresse, le téléphone et les heures (24 h), et publie quelques photos de chantiers.
+2. **Google Search Console** (search.google.com/search-console) : ajoute le domaine `climativ.ca` (vérification par un enregistrement TXT dans Cloudflare), puis soumets `https://climativ.ca/sitemap.xml`.
+3. **Bing Webmaster Tools** : importe le site depuis Search Console en un clic.
+4. **Facebook et Instagram** : ajoute `https://climativ.ca` dans la section À propos.
+5. **Avis Google** : demande à tes clients satisfaits de laisser un avis. C'est ce qui fait monter le plus dans les résultats locaux.
+
 ## Notes
 - Les données GPS des photos ont été retirées.
 - Le site n'utilise ni témoins (cookies) ni outil de statistiques, donc aucune bannière de consentement n'est requise.
