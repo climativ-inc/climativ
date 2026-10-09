@@ -35,24 +35,26 @@ Dans Netlify : *Domain management* → *Add a domain*.
 
 ## Structure
 
+Tous les fichiers sont à la racine du dossier (pas de sous-dossiers). Ça permet de tout glisser d'un coup dans GitHub depuis Safari.
+
 ```
 index.html                         Page d'accueil (tout le site)
 merci.html                         Page de confirmation du formulaire (secours sans JavaScript)
 politique-de-confidentialite.html  Exigée par la Loi 25 pour un formulaire
 404.html                           Page introuvable
-css/styles.css                     Styles (couleurs du logo en haut du fichier)
-js/main.js                         Menu, comparateur avant/après, galerie, formulaire
-fonts/                             Police Plus Jakarta Sans (hébergée sur le site)
-images/                            Photos optimisées (WebP), logos SVG, image de partage
-netlify.toml                       Cache et sécurité pour Netlify
+styles.css                         Styles (couleurs du logo en haut du fichier)
+main.js                            Animations, menu, avant/après, galerie, formulaire
+jakarta-latin-var.woff2            Police Plus Jakarta Sans (hébergée sur le site)
+*.webp, *.svg, *.jpg, *.png        Photos optimisées, logos, icônes, image de partage
+netlify.toml                       Configuration Netlify
 ```
 
 ## Modifier le contenu
 
 - **Textes** : directement dans `index.html`, chaque section est identifiée par un commentaire (`<!-- ============ SERVICES ============ -->`, etc.).
-- **Couleurs** : variables au début de `css/styles.css` (`--marine`, `--ciel`, `--braise`).
-- **Police** : Plus Jakarta Sans, hébergée dans `fonts/` (aucune requête à Google).
-- **Ajouter une photo à la galerie** : exporter en WebP en deux tailles (600 px et 1200 px de large) dans `images/`, puis copier un bloc `<li>` de la galerie dans `index.html`.
+- **Couleurs** : variables au début de `styles.css` (`--marine`, `--ciel`, `--braise`).
+- **Police** : Plus Jakarta Sans, fichier `jakarta-latin-var.woff2` (aucune requête à Google).
+- **Ajouter une photo à la galerie** : exporter en WebP en deux tailles (600 px et 1200 px de large) à la racine, puis copier un bloc `<li>` de la galerie dans `index.html`.
 
 ## Notes
 - Les données GPS des photos ont été retirées.

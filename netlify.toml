@@ -1,4 +1,5 @@
 # Configuration Netlify pour le site Climativ (site statique, aucune compilation)
+# Tous les fichiers du site sont à la racine du dépôt.
 [build]
   publish = "."
 
@@ -10,25 +11,3 @@
     X-Frame-Options = "SAMEORIGIN"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
-
-# Cache long pour les images, polices et icônes
-[[headers]]
-  for = "/images/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/*.png"
-  [headers.values]
-    Cache-Control = "public, max-age=604800"
-
-# CSS et JS : cache court pour voir les modifications rapidement
-[[headers]]
-  for = "/css/*"
-  [headers.values]
-    Cache-Control = "public, max-age=3600"
-
-[[headers]]
-  for = "/js/*"
-  [headers.values]
-    Cache-Control = "public, max-age=3600"
